@@ -13,7 +13,8 @@ class test extends uvm_test;
     env = axi_env::type_id::create("env",this);    
    endfunction
 
-   task run_phase(uvm_phase phase);
+   virtual task run_phase(uvm_phase phase);
+    super.run_phase(phase);
     phase.raise_objection(this);
      `uvm_info("TEST","This is the test component",UVM_MEDIUM);
       seq.start(env.agent.sequencer);

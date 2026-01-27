@@ -13,7 +13,7 @@ class axi_driver extends uvm_driver#(axi_trans);
      `uvm_fatal("DRV","Interface not set for the driver"); 
   endfunction
 
-  task run_phase(uvm_phase phase);
+  virtual task run_phase(uvm_phase phase);
     super.run_phase(phase);
     forever begin
     seq_item_port.get_next_item(a1);
@@ -35,19 +35,11 @@ class axi_driver extends uvm_driver#(axi_trans);
     if1.RREADY <= 1'b0;
     a1.print();
     end
-    
-    @(posedge if1.ACLK);
-    add_c <= if1.AWADDR;
-    @(posedge if1.ACLK);
-    `uvm_info("DRV",$sformatf("interface addr:%0d",add_c),UVM_NONE);
-    data_c <= if1.WDATA;
-    @(posedge if1.ACLK);
-    `uvm_info("DRV",$sformatf("interface data:%0d",data_c),UVM_NONE);
     //For READ Transaction 
     if(a1.ARVALID && a1.RREADY)begin
-    if1.ARADDR = a1.ARADDR;
-    if1.ARVALID = a1.ARVALID;
-    if1.RREADY = a1.RREADY;
+    if1.ARADDR <= a1.ARADDR;
+    if1.ARVALID <= a1.ARVALID;
+    if1.RREADY <= a1.RREADY;
     if1.AWADDR <= 32'd0;
     if1.WDATA <=  32'd0;
     if1.AWVALID <= 1'b0;
@@ -56,8 +48,9 @@ class axi_driver extends uvm_driver#(axi_trans);
     if1.WSTRB <= 4'd0;
     a1.print();
     end
-    //@(posedge if1.ACLK);
+    repeat(3)@(posedge if1.ACLK);
     seq_item_port.item_done();
+    //@(posedge if1.ACLK);
     end
 
 

@@ -14,21 +14,26 @@ class axi_monitor extends uvm_monitor;
     `uvm_fatal("MON","Interface NOT set foe the monitor class");   
   endfunction 
 
-  task run_phase(uvm_phase phase);
+ virtual task run_phase(uvm_phase phase);
+
+    super.run_phase(phase);
    //drive transaction signals with the interface signals 
-   forever begin
-   @(posedge if1.ACLK iff ((if1.AWREADY && if1.WREADY)||(if1.ARREADY && if1.RVALID)));
+   forever begin    
+   @(posedge if1.ACLK );
+   @(posedge if1.ACLK );
+    //#0;
     a1 = axi_trans::type_id::create("a1");
     `uvm_info("MON","MONITOR HAS STARTED",UVM_MEDIUM);
     $display("",);
     //For WRITE Transaction 
-    if(if1.AWREADY && if1.WREADY)begin
+    wait(if1.AWREADY)begin
     a1.AWADDR = if1.AWADDR;
+    `uvm_info("MON",$sformatf("The received DUT address is: %0d",a1.AWADDR),UVM_NONE);
+    end
+   @(posedge if1.ACLK);
+    wait(if1.WREADY)begin
     a1.WDATA = if1.WDATA;
-    a1.AWREADY = if1.AWREADY;
-    a1.BVALID = if1.BVALID;
-    a1.WREADY = if1.WREADY;
-    
+    `uvm_info("MON",$sformatf("The received DUT data is: %0d",a1.WDATA),UVM_NONE);
     end
     //For READ Transaction 
     if(if1.ARREADY && if1.RVALID)begin
@@ -38,9 +43,10 @@ class axi_monitor extends uvm_monitor;
     a1.RVALID = if1.RVALID;
     //a1.print();
     end 
-    a1.print(); 
-   //@(posedge if1.ACLK);   
+   //@(posedge if1.ACLK); 
+    a1.print();   
    mon_port.write(a1); 
    end
+
   endtask
 endclass
