@@ -1,0 +1,190 @@
+$date
+	Tue Jan 27 11:21:54 2026
+$end
+
+$version
+	Synopsys VCS version W-2024.09-SP1_Full64
+$end
+
+$timescale
+	1s
+$end
+
+$comment Csum: 1 65a394b630c2c6bd $end
+
+
+$scope module $unit $end
+$upscope $end
+
+
+$scope module axi_lite_pkg $end
+$upscope $end
+
+
+$scope module tb_pkg $end
+$upscope $end
+
+
+$scope module top $end
+$var reg 1 ! clk $end
+
+$scope begin unnamed$$_vcs_3 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_0 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_1 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_2 $end
+$upscope $end
+
+
+$scope begin unnamed$$_vcs_4 $end
+$upscope $end
+
+
+$scope module if1 $end
+$var reg 1 " ACLK $end
+$var reg 1 # ARESETN $end
+$var reg 1 $ AWVALID $end
+$var reg 1 % AWREADY $end
+$var reg 32 & AWADDR [31:0] $end
+$var reg 1 ' WVALID $end
+$var reg 1 ( WREADY $end
+$var reg 32 ) WDATA [31:0] $end
+$var reg 4 * WSTRB [3:0] $end
+$var reg 1 + BVALID $end
+$var reg 1 , BREADY $end
+$var reg 1 - BRESP $end
+$var reg 1 . ARVALID $end
+$var reg 1 / ARREADY $end
+$var reg 32 0 ARADDR [31:0] $end
+$var reg 1 1 RVALID $end
+$var reg 1 2 RREADY $end
+$var reg 32 3 RDATA [31:0] $end
+$var reg 1 4 RRESP $end
+$var reg 1 5 AWPROT $end
+$var reg 1 6 ARPROT $end
+$upscope $end
+
+
+$scope module d0 $end
+$var reg 3 7 state [2:0] $end
+$var reg 3 8 next_state [2:0] $end
+$var reg 32 9 addr [31:0] $end
+
+$scope begin unnamed$$_0 $end
+$upscope $end
+
+$upscope $end
+
+$upscope $end
+
+
+$scope module uvm_pkg $end
+$var time 64 : setting_offset $end
+$var reg 32 ; uvm_global_random_seed [31:0] $end
+$var reg 32 < UVM_UNBOUNDED_CONNECTIONS [31:0] $end
+$var reg 1 = uvm_start_uvm_declarations $end
+$var reg 32 > setting_verbosity [31:0] $end
+$var reg 1 ? is_verdi_set_verbosity_called $end
+$var reg 1 @ is_uvm_factory_trace_checked $end
+$var reg 1 A is_verdi_trace_fac $end
+$upscope $end
+
+$enddefinitions $end
+
+#0
+$dumpvars
+1@
+0?
+0A
+1=
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx :
+b11111111111111111111111111111111 <
+b00000000000000000000000000000000 >
+b01000010000001111100110001000111 ;
+0!
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 9
+b000 8
+bxxx 7
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 3
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx 0
+bxxxx *
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx )
+bxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx &
+x6
+x5
+0"
+x#
+x/
+x.
+x%
+x$
+x,
+0-
+x+
+x2
+04
+x1
+x(
+x'
+$end
+#5
+1!
+1"
+1#
+b00000000000000000000000000001010 &
+b00000000000000000000000000100011 )
+1$
+1,
+1'
+b1111 *
+b00000000000000000000000000000000 0
+0.
+02
+b00000000000000000000000000000000 9
+b00000000000000000000000000000000 3
+b000 7
+0/
+01
+0%
+0(
+0+
+b011 8
+#10
+0!
+0"
+#15
+1!
+1"
+b011 7
+1%
+b100 8
+#20
+0!
+0"
+#25
+1!
+1"
+b00000000000000000000000000001010 9
+b100 7
+0%
+1(
+b101 8
+#30
+0!
+0"
+#35
+1!
+1"
+b00000000000000000000000000000000 9
+b101 7
+0(
+1+
+b000 8
