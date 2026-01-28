@@ -5,7 +5,7 @@ class axi_trans extends uvm_sequence_item;
 
 //declare the signals
 //Global signals
-  logic ARESETN = 1'b1;;
+  logic ARESETN;
 //Write address channel 
   rand logic AWVALID;
   logic AWREADY;

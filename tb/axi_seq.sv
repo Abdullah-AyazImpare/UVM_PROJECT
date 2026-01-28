@@ -29,7 +29,7 @@ endclass
 //----------------//
 //Read Transaction//
 class axi_seq_rd extends axi_seq;
- `uvm_object_utils(axi_seq)
+ `uvm_object_utils(axi_seq_rd)
 
   function new(string name = "axi_seq_rd");
    super.new(name);
@@ -38,7 +38,7 @@ class axi_seq_rd extends axi_seq;
   task body();
   a1 = axi_trans::type_id::create("axi_trans");
   start_item(a1);
-  `uvm_info("SEQ","The sequence has started",UVM_MEDIUM);
+  `uvm_info("SEQ_RD","The read sequence has started",UVM_MEDIUM);
    assert(a1.randomize()with{
    AWADDR== 32'd0;
    WDATA==32'd0;

@@ -1,4 +1,4 @@
-310      
+338      
 0 uvm_macros.svh
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/uvm_macros.svh
 0 macros/uvm_version_defines.svh
@@ -277,18 +277,34 @@
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_seq.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_seq.sv
 0 rtl/axi_seq.sv
+0 axi_seq2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_seq2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_seq2.sv
+0 rtl/axi_seq2.sv
 0 axi_sequencer.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_sequencer.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_sequencer.sv
 0 rtl/axi_sequencer.sv
+0 axi_seqr22.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_seqr22.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_seqr22.sv
+0 rtl/axi_seqr22.sv
 0 axi_driver.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_driver.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_driver.sv
 0 rtl/axi_driver.sv
+0 axi_drv2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_drv2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_drv2.sv
+0 rtl/axi_drv2.sv
 0 axi_monitor.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_monitor.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_monitor.sv
 0 rtl/axi_monitor.sv
+0 axi_mon2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_mon2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_mon2.sv
+0 rtl/axi_mon2.sv
 0 axi_coverage.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_coverage.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_coverage.sv
@@ -297,10 +313,22 @@
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_agent.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_agent.sv
 0 rtl/axi_agent.sv
+0 axi_agent2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_agent2.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_agent2.sv
+0 rtl/axi_agent2.sv
 0 axi_scoreboard.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_scoreboard.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_scoreboard.sv
 0 rtl/axi_scoreboard.sv
+0 axi_vseqr.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_vseqr.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_vseqr.sv
+0 rtl/axi_vseqr.sv
+0 axi_vseq.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_vseq.sv
+0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_vseq.sv
+0 rtl/axi_vseq.sv
 0 axi_env.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/systemverilog/axi_env.sv
 0 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/axi_env.sv
@@ -409,17 +437,24 @@ C_INCLUDE_PATH=/opt/curl/include:/opt/curl/include:
 COLORTERM=truecolor
 0
 0
-152
-1769501337 tb/test.sv
-1768972616 tb/axi_env.sv
-1768887856 tb/axi_scoreboard.sv
+159
+1769578108 tb/test.sv
+1769597649 tb/axi_env.sv
+1769602794 tb/axi_vseq.sv
+1769597188 tb/axi_vseqr.sv
+1769597822 tb/axi_scoreboard.sv
+1769594091 tb/axi_agent2.sv
 1768888192 tb/axi_agent.sv
 1768980589 tb/axi_coverage.sv
-1769509854 tb/axi_monitor.sv
-1769501660 tb/axi_driver.sv
+1769594002 tb/axi_mon2.sv
+1769592304 tb/axi_monitor.sv
+1769597103 tb/axi_drv2.sv
+1769602992 tb/axi_driver.sv
+1769594389 tb/axi_seqr22.sv
 1768888427 tb/axi_sequencer.sv
-1769490859 tb/axi_seq.sv
-1769425916 tb/axi_trans.sv
+1769574432 tb/axi_seq2.sv
+1769596166 tb/axi_seq.sv
+1769584105 tb/axi_trans.sv
 1733289098 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/vcs/vcs_uvm_alt.sv
 1733289097 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/reg/snps_uvm_reg_bank.svh
 1733289097 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/reg/sequences/uvm_reg_mem_hdl_paths_seq.svh
@@ -555,10 +590,10 @@ COLORTERM=truecolor
 1733289097 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/macros/snps_macros.svp
 1733289097 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/macros/uvm_version_defines.svh
 1733289098 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/uvm_macros.svh
-1769491525 tb/top.sv
-1768971988 tb/tb_pkg.sv
+1769584282 tb/top.sv
+1769577955 tb/tb_pkg.sv
 1769429679 rtl/axi_if.sv
-1769418896 rtl/design.sv
+1769603595 rtl/design.sv
 1733289098 /opt/synopsys/vcs/W-2024.09-SP1/etc/uvm/uvm_pkg.sv
 1733285154 /opt/synopsys/vcs/W-2024.09-SP1/linux64/lib/vcsdstub.tab
 1768887699 file.f
@@ -569,5 +604,5 @@ COLORTERM=truecolor
 1733286010 /opt/synopsys/vcs/W-2024.09-SP1/linux64/lib/liberrorinf.so
 1733286000 /opt/synopsys/vcs/W-2024.09-SP1/linux64/lib/libsnpsmalloc.so
 1733285992 /opt/synopsys/vcs/W-2024.09-SP1/linux64/lib/libvfs.so
-1769509871 simv.daidir
+1769603620 simv.daidir
 -1 partitionlib

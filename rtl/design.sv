@@ -82,7 +82,7 @@ module axi_lite_slave (
 	assign s_axi_lite.ARREADY = (state == RADDR) ? 1 : 0;
 
 	// R
-	assign s_axi_lite.RDATA  = (state == RDATA) ? addr : 0;
+	assign s_axi_lite.RDATA  = (state == RDATA) ? buffer[addr] : 0;
 	assign s_axi_lite.RRESP  = RESP_OKAY;
 	assign s_axi_lite.RVALID = (state == RDATA) ? 1 : 0;
 
@@ -134,8 +134,12 @@ module axi_lite_slave (
   always_ff @(posedge s_axi_lite.ACLK) begin
     if (~s_axi_lite.ARESETN) begin
 			state <= IDLE;
+                        //$display("TIME=%0t state=%0d AWREADY=%b", $time, state, s_axi_lite.AWREADY);
+
 		end else begin
 			state <= next_state;
+                        //$display("TIME=%0t state=%0d AWREADY=%b", $time, state, s_axi_lite.AWREADY);
+
 		end
 	end
 

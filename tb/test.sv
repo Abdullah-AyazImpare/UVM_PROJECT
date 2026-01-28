@@ -3,6 +3,7 @@ class test extends uvm_test;
     axi_seq seq;
     axi_seq_rd rd_seq;
    axi_env env;
+   axi_vseq vseq;
    function new(string name = "test",uvm_component parent = null);
     super.new(name,parent);
    endfunction
@@ -15,9 +16,10 @@ class test extends uvm_test;
 
    virtual task run_phase(uvm_phase phase);
     super.run_phase(phase);
+    vseq = axi_vseq::type_id::create("vseq",this);
     phase.raise_objection(this);
      `uvm_info("TEST","This is the test component",UVM_MEDIUM);
-      seq.start(env.agent.sequencer);
+      vseq.start(env.vseqr);
     phase.phase_done.set_drain_time(this, 1000ns);
     phase.drop_objection(this);
    endtask
