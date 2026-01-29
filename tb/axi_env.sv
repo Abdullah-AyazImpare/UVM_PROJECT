@@ -24,8 +24,8 @@ class axi_env extends uvm_env;
      vseqr.seqr1 = agent.sequencer;
      vseqr.seqr2 = agent2.sequencer;
      agent.monitor.mon_port.connect(scrbd.wr_scrbd_port);
-     //agent.monitor.mon_port.connect(cov.analysis_export); 
+     agent.monitor.mon_port.connect(cov.wr_cov_port); 
        agent2.monitor.mon_port.connect(scrbd.rd_scrbd_port);
-     agent2.monitor.mon_port.connect(cov.analysis_export);   
+     agent2.monitor.mon_port.connect(cov.rd_cov_port);   
    endfunction
 endclass

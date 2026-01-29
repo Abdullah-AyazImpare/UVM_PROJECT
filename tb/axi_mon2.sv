@@ -37,6 +37,7 @@ class axi_mon2 extends uvm_monitor;
     a1.RDATA = if1.RDATA;
     a1.RVALID = if1.RVALID;
     a1.RREADY = if1.RREADY;
+    a1.RRESP = if1.RRESP;
     `uvm_info("MON2",$sformatf("The received DUT data is: %0d",a1.RDATA),UVM_NONE);
     end
    //@(posedge if1.ACLK); 

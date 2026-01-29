@@ -55,6 +55,7 @@ class axi_driver extends uvm_driver#(axi_trans);
       wait(if1.AWREADY);
       if1.WVALID <= a1.WVALID;
       if1.WDATA <= a1.WDATA;
+      if1.WSTRB <= a1.WSTRB;
       wait(if1.WREADY);
     end
   endtask

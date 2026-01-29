@@ -29,6 +29,6 @@ class test extends uvm_test;
    endfunction
 
    function void report_phase(uvm_phase phase);
-    $display($get_coverage());
+    $display("The achieved coverage is: %0d percent",$get_coverage());
    endfunction
 endclass

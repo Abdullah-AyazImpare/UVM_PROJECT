@@ -14,7 +14,7 @@ interface axi_if(input logic ACLK);
 //Write response channel
   logic BVALID;
   logic BREADY;
-  logic BRESP;
+  logic [1:0]BRESP;
 //Read address channel
   logic ARVALID;
   logic ARREADY;
@@ -24,5 +24,5 @@ interface axi_if(input logic ACLK);
   logic RVALID;
   logic RREADY;
   logic [31:0]RDATA;
-  logic RRESP;
+  logic [1:0]RRESP;
 endinterface

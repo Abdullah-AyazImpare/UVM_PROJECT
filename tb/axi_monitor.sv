@@ -37,12 +37,19 @@ class axi_monitor extends uvm_monitor;
     a1.WDATA = if1.WDATA;
     a1.WVALID = if1.WVALID;
     a1.WREADY = if1.WREADY;
+    a1.WSTRB = if1.WSTRB;
     `uvm_info("MON",$sformatf("The received DUT data is: %0d",a1.WDATA),UVM_NONE);
     end
-   //@(posedge if1.ACLK); 
+   @(posedge if1.ACLK);
+    wait(if1.BVALID)
+    begin
+     a1.BVALID<= if1.BVALID;
+     a1.BREADY <= if1.BREADY;
+     a1.BRESP <= if1.BRESP;
+    end
+   @(posedge if1.ACLK); 
     a1.print();   
    mon_port.write(a1); 
    end
-
   endtask
 endclass

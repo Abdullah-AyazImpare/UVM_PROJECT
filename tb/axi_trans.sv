@@ -38,7 +38,7 @@ class axi_trans extends uvm_sequence_item;
    `uvm_field_int(WREADY,UVM_ALL_ON)
    `uvm_field_int(AWADDR,UVM_ALL_ON)
    `uvm_field_int(WDATA,UVM_ALL_ON)
-
+   `uvm_field_int(RRESP,UVM_ALL_ON)
    `uvm_field_int(ARVALID,UVM_ALL_ON)
    `uvm_field_int(ARREADY,UVM_ALL_ON)
    `uvm_field_int(RVALID,UVM_ALL_ON)
