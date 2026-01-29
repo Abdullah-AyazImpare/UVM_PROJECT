@@ -30,6 +30,17 @@ class axi_mon2 extends uvm_monitor;
     a1.ARADDR = if1.ARADDR;
     a1.ARVALID = if1.ARVALID;
     a1.ARREADY = if1.ARREADY;
+ //making write signals zero
+    a1.AWVALID = if1.AWVALID;
+    a1.AWREADY = if1.AWREADY;
+    a1.WVALID  = if1.WVALID;
+    a1.WREADY = if1.WREADY;
+    a1.AWADDR = if1.AWADDR;
+    a1.BRESP = if1.BRESP;
+    a1.BREADY = if1.BREADY;
+    a1.BVALID = if1.BVALID;
+    a1.WDATA = if1.WDATA;
+    a1.WSTRB = if1.WSTRB;
     `uvm_info("MON2",$sformatf("The received DUT address is: %0d",a1.ARADDR),UVM_NONE);
     end
    @(posedge if1.ACLK);

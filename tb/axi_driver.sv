@@ -20,7 +20,10 @@ class axi_driver extends uvm_driver#(axi_trans);
     wait(if1.ARESETN);
     @(negedge if1.ACLK );
     `uvm_info("DRV","The Driver has started",UVM_NONE);
-
+     if1.ARVALID <= 0;
+     if1.ARADDR <= 32'd0;
+     if1.RVALID <= 0;
+     
      fork
       add_wr(a1);
       write(a1);

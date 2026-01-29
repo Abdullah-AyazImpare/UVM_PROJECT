@@ -38,6 +38,14 @@ class axi_monitor extends uvm_monitor;
     a1.WVALID = if1.WVALID;
     a1.WREADY = if1.WREADY;
     a1.WSTRB = if1.WSTRB;
+//making read signals zero
+    a1.ARVALID = if1.ARVALID;
+    a1.ARREADY = if1.ARREADY;
+    a1.RVALID  = if1.RVALID;
+    a1.RREADY = if1.RREADY;
+    a1.ARADDR = if1.ARADDR;
+    a1.RRESP = if1.RRESP;
+    a1.RDATA = if1.RDATA;
     `uvm_info("MON",$sformatf("The received DUT data is: %0d",a1.WDATA),UVM_NONE);
     end
    @(posedge if1.ACLK);

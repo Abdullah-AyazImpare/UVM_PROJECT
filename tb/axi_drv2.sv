@@ -20,6 +20,12 @@ class axi_drv2 extends uvm_driver#(axi_trans);
     wait(if1.ARESETN);
     @(negedge if1.ACLK );
     `uvm_info("DRV2","The Driver2 has started",UVM_NONE);
+     if1.AWVALID <= 0;
+     if1.AWADDR <= 32'd0;
+     if1.WVALID <= 0;
+     if1.WDATA <= 32'd0;
+     if1.BVALID <= 0;
+     if1.WSTRB <= a1.WSTRB;
      fork
       add_rd(a1);
       read(a1);
